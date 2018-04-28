@@ -1,11 +1,16 @@
 var finalanswer = "grady";
 
-
-
-
 $(function () {
-    $(".draggable").draggable(); //all instances of draggable class are now draggable
-    $(".droppable").droppable(); //#droppable id, just one div tag, is now droppable
+    $(".draggable").draggable({
+        revert: "invalid",
+        snap: ".droppable",
+        snapMode: "inner",
+        helper: "clone"
+    }); 
+    $(".droppable").droppable({
+        tolerance: "fit"
+    });
+    // $(".feedback").attr("src", "./images/question.png")
 });
 
 function dragit(answer) {
@@ -14,13 +19,11 @@ function dragit(answer) {
     $('#test').html(answer);
 }
 
-function dropit(response) {
-
+function dropit(feedback_id, response) {
     $('#test').html(sumthing);
     if (response === sumthing) {
-        $('#feedback').html("correct");
+        $('#feedback'+feedback_id).attr("src", "./images/right.png");
     } else {
-        $('#feedback').html("wrong stupid!");
+        $('#feedback'+feedback_id).attr("src", "./images/wrong.jpeg");
     }
-
 }

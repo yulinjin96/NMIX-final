@@ -13,20 +13,40 @@
 </head>
 
 <body>
-    <div class="holder">
-        <div class="draggable" ondrag="dragit('confucius');">Choose a job you love, and you will never have to work a day in your life.</div>
-        <div class="draggable" ondrag="dragit('mao');">Chairman Mao</div>
-        <div class="draggable" ondrag="dragit('forbidden');">Forbidden City</div>
-        <div class="draggable" ondrag="dragit('Shanghai');">Shanghai</div>
-    </div>
-    <div class="holder">
-        <div class="droppable" ondrop="dropit('mao')">Founder of the PROC</div>
-        <div class="droppable" ondrop="dropit('Shanghai')">Big modern business city in China</div>
-        <div class="droppable" ondrop="dropit('forbidden')">Son of Heaven home</div>
-        <div class="droppable" ondrop="dropit('confucius')">Confucius Quote</div>
-    </div>
 
-    <div id="feedback">feedback goes here</div>
-</body>
+    <div id="page-title">
+        <p>Let's test your knowedge!</p>
+    </div>
+    <br>
 
+
+    <div id="quiz-holder">
+        <div class="holder" id="draggable-holder">
+            <div class="draggable" ondrag="dragit('confucius');">Choose a job you love, and you will never have to work a day in your life.</div>
+            <div class="draggable" ondrag="dragit('mao');">Chairman Mao</div>
+            <div class="draggable" ondrag="dragit('forbidden');">Forbidden City</div>
+            <div class="draggable" ondrag="dragit('Shanghai');">Shanghai</div>
+        </div>
+        <div class="holder" id="droppable-holder">
+            <div class="droppable" ondrop="dropit('1','mao')">Founder of the PROC</div>
+            <div class="droppable" ondrop="dropit('2','Shanghai')">Big modern business city in China</div>
+            <div class="droppable" ondrop="dropit('3','forbidden')">Son of Heaven home</div>
+            <div class="droppable" ondrop="dropit('4','confucius')">Confucius Quote</div>
+        </div>
+
+        <div class="holder" id="feedback-holder">
+            <div class="feedback"> 
+                <img id="feedback1" src="./images/question.png">
+            </div>
+            <div class="feedback">
+                <img id="feedback2" src="./images/question.png">
+            </div>
+            <div class="feedback">
+                <img id="feedback3" src="./images/question.png">
+            </div>
+            <div class="feedback">
+                <img id="feedback4" src="./images/question.png">
+            </div>
+        </div>
+    </div>
 </html>
