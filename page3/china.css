@@ -1,0 +1,36 @@
+.draggable {
+    width: 200px;
+    height: 100px;
+    background-color: #a79292;
+    margin-bottom: 40px;
+}
+
+.droppable {
+    width: 200px;
+    height: 100px;
+    background-color: #6c3d3d;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.holder {
+    float: left;
+    height: 660px;
+    width: 202px;
+    margin-right: 300px;
+    /*    background-color: #000;*/
+}
+
+#feedback {
+    width: 600px;
+    text-align: center;
+    font-size: 27px;
+    float: left;
+}
+
+#test {
+    width: 600px;
+    text-align: center;
+    font-size: 27px;
+    float: left;
+}

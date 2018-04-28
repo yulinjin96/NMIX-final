@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>china quiz</title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script src="function.js"></script>
+    <link rel="stylesheet" href="china.css">
+</head>
+
+<body>
+    <div class="holder">
+        <div class="draggable" ondrag="dragit('confucius');">Choose a job you love, and you will never have to work a day in your life.</div>
+        <div class="draggable" ondrag="dragit('mao');">Chairman Mao</div>
+        <div class="draggable" ondrag="dragit('forbidden');">Forbidden City</div>
+        <div class="draggable" ondrag="dragit('Shanghai');">Shanghai</div>
+    </div>
+    <div class="holder">
+        <div class="droppable" ondrop="dropit('mao')">Founder of the PROC</div>
+        <div class="droppable" ondrop="dropit('Shanghai')">Big modern business city in China</div>
+        <div class="droppable" ondrop="dropit('forbidden')">Son of Heaven home</div>
+        <div class="droppable" ondrop="dropit('confucius')">Confucius Quote</div>
+    </div>
+
+    <div id="feedback">feedback goes here</div>
+</body>
+
+</html>
