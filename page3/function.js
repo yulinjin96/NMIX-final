@@ -1,11 +1,16 @@
 var finalanswer = "grady";
 
-
-
-
 $(function () {
-    $(".draggable").draggable(); //all instances of draggable class are now draggable
-    $(".droppable").droppable(); //#droppable id, just one div tag, is now droppable
+    $(".draggable").draggable({
+        revert: "invalid",
+        snap: ".droppable",
+        snapMode: "inner",
+        helper: "clone"
+    }); 
+    $(".droppable").droppable({
+        tolerance: "fit"
+    });
+    // $(".feedback").attr("src", "./images/question.png")
 });
 
 function dragit(answer) {
@@ -14,13 +19,18 @@ function dragit(answer) {
     $('#test').html(answer);
 }
 
-function dropit(response) {
+function dropit(feedback_id, response) {
+    var correct_audio = document.createElement('audio');
+    correct_audio.setAttribute('src', 'https://www.soundjay.com/misc/sounds/bell-ring-01.mp3');
+    var wrong_audio = document.createElement('audio');
+    wrong_audio.setAttribute('src', 'https://www.soundjay.com/misc/sounds/fail-buzzer-01.mp3');
 
     $('#test').html(sumthing);
     if (response === sumthing) {
-        $('#feedback').html("correct");
+        correct_audio.play();
+        $('#feedback'+feedback_id).attr("src", "./images/right.png");
     } else {
-        $('#feedback').html("wrong stupid!");
+        wrong_audio.play();
+        $('#feedback'+feedback_id).attr("src", "./images/wrong.jpeg");
     }
-
 }
